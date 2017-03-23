@@ -31,7 +31,7 @@ public class SearchController {
         model.addAttribute("jobs", jobs);
 
 
-        return "search/results";
+        return "results";
     }
 
 }
