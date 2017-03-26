@@ -35,13 +35,15 @@
     </form>
 
 
-    <ul>
-        <div th:each="job : ${jobs}">
-            <a th:href="@{/list/values(column=${job.key})}" th:text="${job.value}">nothing</a>
-        </div>
-    </ul>
 
-    <!-- TODO #2 - Loop over jobs map to display all job fields -->
+<span th:each = "items : ${jobs}">
+    <table >
+        <tr th:each="item, idx : ${items}">
+            <th th:text = "${item.key}"></th><td th:text="${item.value}"></td>
+        </tr>
+    </table>
+</span>
+
 
 </div>
 
